@@ -33,6 +33,6 @@ void AGVBaseCharacter::Tick(float DeltaTime)
 
 
 
-void AGVBaseCharacter::SetupPlayerInputComponent(UInputComponent* InputComponent)
+void AGVBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 }
