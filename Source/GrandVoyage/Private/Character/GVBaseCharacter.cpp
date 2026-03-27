@@ -2,12 +2,18 @@
 
 
 #include "Character/GVBaseCharacter.h"
+#include "Components/SkeletalMeshComponent.h"
+
 
 // Sets default values
 AGVBaseCharacter::AGVBaseCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Skeletal Mesh"));
+	SkeletalMeshComponent->SetupAttachment(GetRootComponent());
+
 
 }
 
@@ -25,10 +31,8 @@ void AGVBaseCharacter::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void AGVBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+
+
+void AGVBaseCharacter::SetupPlayerInputComponent(UInputComponent* InputComponent)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
-

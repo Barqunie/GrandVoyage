@@ -8,7 +8,7 @@
 
 
 class USkeletalMeshComponent;
-class UCameraComponent;
+
 UCLASS()
 
 
@@ -16,6 +16,8 @@ class GRANDVOYAGE_API AGVBaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	USkeletalMeshComponent* SkeletalMeshComponent;
 
 public:
 	// Sets default values for this character's properties
@@ -29,7 +31,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 
 };
