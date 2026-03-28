@@ -25,12 +25,7 @@ public class GrandVoyage : ModuleRules
 
 		PublicIncludePaths.AddRange(new string[] {
 			"GrandVoyage",
-			"GrandVoyage/Variant_Horror",
-			"GrandVoyage/Variant_Horror/UI",
-			"GrandVoyage/Variant_Shooter",
-			"GrandVoyage/Variant_Shooter/AI",
-			"GrandVoyage/Variant_Shooter/UI",
-			"GrandVoyage/Variant_Shooter/Weapons"
+
 		});
 
 		// Uncomment if you are using Slate UI
